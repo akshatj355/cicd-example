@@ -33,7 +33,7 @@ public class AppTest {
 	static ExtentReports report;
 	static ExtentTest test;
 	ChromeDriver driver;
-	String url = "http://localhost:80";
+	String url = "http://localhost:80/";
 //	String url = System.getProperty("user.dir") + "/src/test/java/webServer/index.html";
 	static File file = new File(System.getProperty("user.dir") + "/Report/Automation_.html");
 		
