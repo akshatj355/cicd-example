@@ -33,7 +33,7 @@ public class AppTest {
 	static ExtentReports report;
 	static ExtentTest test;
 	ChromeDriver driver;
-	String url = "http://localhost:8080/myproject.com/";
+	String url = "http://localhost:80/";
 //	String url = System.getProperty("user.dir") + "/src/test/java/webServer/index.html";
 	static File file = new File(System.getProperty("user.dir") + "/Report/Automation_.html");
 		
@@ -56,8 +56,8 @@ public class AppTest {
 		test = report.createTest("<b>[API]</b> Validate response code");
 		try {
 			
-			RestAssured.baseURI = "http://localhost:8080";
-			RestAssured.basePath = "/myproject.com/";
+			RestAssured.baseURI = "http://localhost:80";
+			RestAssured.basePath = "/";
 			
 			
 			Response response =
@@ -67,7 +67,7 @@ public class AppTest {
 									.headers("Connection", "keep-alive")
 									.headers("sec-ch-ua", "'Google Chrome';v='105', 'Not)A;Brand';v='8', 'Chromium';v='105'")
 									.headers("sec-ch-ua-mobile", "?0")
-									.headers("sec-ch-ua-platform", "'Windows'")
+									.headers("sec-ch-ua-platform", "'Linux'")
 								.when()
 									.get()
 								.then()
