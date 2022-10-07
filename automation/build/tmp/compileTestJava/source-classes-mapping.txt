@@ -1,2 +1,0 @@
-automation/AppTest.java
- automation.AppTest
