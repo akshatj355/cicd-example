@@ -133,7 +133,7 @@ public class AppTest {
 		}
 		test.pass("Chrome browser closed successfully");
 		
-		driver.close();
+// 		driver.close();
 		String status = String.valueOf(test.getStatus());
 		if(status.equals("pass")) {
 			test.pass(MarkupHelper.createLabel("Test Case is : "+status, ExtentColor.GREEN));
