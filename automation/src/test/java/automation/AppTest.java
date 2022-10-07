@@ -8,7 +8,7 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -28,7 +28,7 @@ public class AppTest {
 	static ExtentHtmlReporter reporter;
 	static ExtentReports report;
 	static ExtentTest test;
-	ChromeDriver driver;
+	FirefoxDriver driver;
 	String url = "http://localhost";
 //	String url = System.getProperty("user.dir") + "/src/test/java/webServer/index.html";
 	static File file = new File(System.getProperty("user.dir") + "/Report/Automation_.html");
@@ -86,8 +86,8 @@ public class AppTest {
 	public void webTesting() throws InterruptedException {
 		test = report.createTest("<b>[UI]</b> Validate fields are inserting as expected");
 		try {
-			WebDriverManager.chromedriver().setup();
-			driver= new ChromeDriver();
+			WebDriverManager.firefoxdriver().setup();
+			driver= new FirefoxDriver();
 			if(driver != null) {
 				test.pass("Chrome browser launched sucessfully !!!");
 				driver.manage().window().maximize();
