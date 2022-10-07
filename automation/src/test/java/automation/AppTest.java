@@ -29,7 +29,7 @@ public class AppTest {
 	static ExtentHtmlReporter reporter;
 	static ExtentReports report;
 	static ExtentTest test;
-	FirefoxDriver driver;
+	ChromeDriver driver;
 	String url = "http://localhost";
 //	String url = System.getProperty("user.dir") + "/src/test/java/webServer/index.html";
 	static File file = new File(System.getProperty("user.dir") + "/Report/Automation_.html");
