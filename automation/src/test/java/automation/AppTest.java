@@ -8,7 +8,8 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -86,8 +87,10 @@ public class AppTest {
 	public void webTesting() throws InterruptedException {
 		test = report.createTest("<b>[UI]</b> Validate fields are inserting as expected");
 		try {
-			WebDriverManager.firefoxdriver().setup();
-			driver= new FirefoxDriver();
+			WebDriverManager.chromedriver().setup();
+			ChromeOptions option = new ChromeOptions();
+			option.addArguments("--headless");
+			driver= new ChromeDriver(option);
 			if(driver != null) {
 				test.pass("Chrome browser launched sucessfully !!!");
 				driver.manage().window().maximize();
